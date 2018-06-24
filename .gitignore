@@ -1,0 +1,7 @@
+images
+node_modules
+test
+index.html
+style.css
+
+.DS_store

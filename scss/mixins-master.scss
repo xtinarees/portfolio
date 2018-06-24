@@ -1,0 +1,21 @@
+$device__large: 1024px;
+$device__small: 500px;
+
+
+@mixin breakpoint($size) {
+   @if $size == large-only {
+       @media (min-width: $device__large) { @content; } // 1024px    
+
+   } @else if $size == medium-only {
+       @media (max-width: $device__large) and (min-width: $device__small) { @content; }
+   
+   } @else if $size == small-only {
+       @media (max-width: $device__small) { @content; }
+   
+   } @else if $size == large-medium {
+       @media (min-width: $device__small) { @content; }
+
+   } @else if $size == medium-small {
+       @media (max-width: $device__large) { @content; }
+   }
+}

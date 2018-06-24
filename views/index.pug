@@ -1,0 +1,303 @@
+-
+	var filters = [
+		{
+			name: 'Role',
+			slug: 'role',
+			options: [
+				{
+					name: 'Dev',
+					slug: 'code',
+				},
+				{
+					name: 'UI',
+					slug: 'ui',
+				},
+				{
+					name: 'Design',
+					slug: 'design',
+				},
+			]
+		},
+		{
+			name: 'For',
+			slug: 'client',
+			options: [
+				{
+					name: 'D Magazine',
+					slug: 'dmagazine',
+				},
+				{
+					name: 'NPR',
+					slug: 'npr',
+				},
+				{
+					name: 'Freelance',
+					slug: 'freelance',
+				},
+				{
+					name: 'Fun',
+					slug: 'fun',
+				}
+			]
+		},
+	]
+ 
+	var filtereds = [
+		{
+			year: '2018',
+			items: [
+				{
+					name: 'D Weddings',
+					link: 'http://dweddings.com',
+					year: '2018',
+					role: 'code',
+					client: 'dmagazine',
+				},
+				{
+					name: 'This Portfolio Website',
+					link: '',
+					year: '2018',
+					role: 'code ui design',
+					client: 'fun',
+				}
+			],
+		},
+		{
+			year: '2017',
+			items: [
+				{
+					name: 'Quote Wall',
+					link: 'https://www.dmagazine.com/section/arts-entertainment/?layout=quote',
+					year: '2017',
+					role: 'code design',
+					client: 'fun dmagazine',
+				},
+				{
+					name: 'Little Sous',
+					link: 'http://mylittlesous.com',
+					year: '2017',
+					role: 'code',
+					client: 'freelance',
+				},
+				{
+					name: '10 Most Stylish',
+					link: 'https://www.dmagazine.com/shopping-fashion/2017/09/10-most-stylish-people-in-dallas-2017/',
+					year: '2017',
+					role: 'code ui',
+					client: 'dmagazine',
+				},
+				{
+					name: 'Dallas Directories',
+					link: 'https://directory.dmagazine.com/search/?sections=Restaurants',
+					year: '2017',
+					role: 'code ui',
+					client: 'dmagazine',
+				},
+			]
+		},
+		{
+			year: '2016',
+			items: [
+				{
+					name: 'D Magazine',
+					link: 'https://www.dmagazine.com',
+					year: '2016',
+					role: 'code ui',
+					client: 'dmagazine',
+				},
+				{
+					name: 'Wikiblock',
+					link: 'http://betterblock.org/wikiblock/',
+					year: '2016',
+					role: 'code',
+					client: 'freelance',
+				},
+			]
+		},
+		{
+			year: '2015',
+			items: [
+				{
+					name: 'Dallas Neighborhood Guides',
+					link: 'http://neighborhoods.dmagazine.com/',
+					year: '2015',
+					role: 'code ui',
+					client: 'dmagazine',
+				},
+			]
+		},
+		{
+			year: '2014',
+			items: [
+				{
+					name: 'NPR Elections',
+					link: 'http://elections2014.npr.org/',
+					year: '2014',
+					role: 'code ui',
+					client: 'npr'
+				},
+				{
+					name: 'NPR Book Concierge',
+					link: 'http://apps.npr.org/best-books-2014/',
+					year: '2014',
+					role: 'code design',
+					client: 'npr'
+				},
+				{
+					name: 'Trashy Type',
+					link: 'http://trashytype.tumblr.com/',
+					year: '2014',
+					role: 'code design',
+					client: 'fun'
+				},
+			]
+		},
+		{
+			year: '2013',
+			items: [
+				{
+					name: 'Furby Destruction',
+					link: 'http://christinarees.com/furby/furby.html',
+					year: '2013',
+					role: 'code design illustration',
+					client: 'fun'
+				}
+			]
+		}
+	]
+
+	var images = [
+		{
+			path: 'rainbow-norway.jpg',
+			caption: 'Digital photograph',
+			icon: '🌈'
+		},
+		{
+			path: 'fancy-food-copy.jpg',
+			caption: 'Digital photograph',
+			icon: '🌭'
+		},
+		{
+			path: 'heat-house.jpg',
+			caption: 'digital photograph',
+			icon: '🏠'
+		},
+		{
+			path: 'blood.jpg',
+			caption: 'textile sculpture',
+			icon: '🔴'
+		},
+		{
+			path: 'feathers.jpg',
+			caption: 'charcoal drawing',
+			icon: '🐦'
+		},
+		{
+			path: 'glow-worms.jpg',
+			caption: 'guache painting',
+			icon: '〰️'
+		},
+		{
+			path: 'medusa.jpg',
+			caption: 'clay sculpture',
+			icon: '🐍'
+		},
+		{
+			path: 'plant-girl.jpg',
+			caption: 'digital illustration',
+			icon: '🌿'
+		},
+		{
+			path: 'shells.jpg',
+			caption: 'digital photo collage',
+			icon: '🐚'
+		},
+	]
+
+
+doctype html
+html(lang="en")
+	head
+		meta(charset='utf-8')
+		meta(name='viewport' content='width=device-width, initial-scale=1')
+		title= 'Christina Rees | Web Developer and Designer'
+		link(rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' type='text/css')
+		link(rel='stylesheet' href='style.css' type='text/css')
+	body
+		nav.nav.js-nav
+			.container.nav__content
+				span.nav__name='Christina Rees'
+				ul.nav__items
+					li.nav__item.js-nav-item.is-active(data-scrollto='websites')= 'Sites'
+					li.nav__item.js-nav-item(data-scrollto='other')= 'Other'
+					li.nav__item.js-nav-item(data-scrollto='about')= 'About'
+
+		section.section.websites#websites
+			.nav-pushdown
+			.container.websites__filters
+				.all-filters
+					each filter in filters
+						.filters
+							h2.filters__title= filter.name + ':'
+							ul.filters__content.js-dropdown-content
+								each option in filter.options
+									li.filter(data-type=filter.slug, data-filter=option.slug)= option.name
+
+
+			.container
+				.filtereds
+					each year, indexYear in filtereds
+						div.filtered.js-filtered(data-year= year.year)
+							span.filtered__year
+								span.filtered__year-inner= year.year
+							each filtered, indexItem in year.items
+								span.filtered__content.js-filtered-content(data-year=filtered.year, data-role=filtered.role, data-client=filtered.client)
+									a.filtered__website(href=filtered.link, target='_blank')= filtered.name
+									if indexItem == (year.items.length - 1) 
+										span.filtered__punctuation='.'
+									else 
+										span.filtered__punctuation=','
+
+
+		section.section.others#other
+			.nav-pushdown
+			.container
+				.other
+					each image in images
+						span.js-image.other__image(data-src='images/' + image.path)
+						p.other__caption.js-image-caption= image.caption + ' ' + image.icon
+				button.others__button.js-get-new-image= 'Another One'
+
+		section.section.about#about
+			.nav-pushdown
+			.container.about__inner
+				img.about__image(src='images/me.jpg')
+				.about__content
+					p= 'Front-end Developer at '
+						a(href="https://www.dmagazine.com/")= 'D Magazine'
+					p
+						| Previously: Intern, 
+						a(href="http://blog.apps.npr.org/") NPR Visuals Team
+						|  and Martha Stewart
+					p= 'RISD BFA Graphic Design 2014'
+					p= 'Contact: reesxtina@gmail.com'
+					p
+						a.about__social(href="https://github.com/xtinarees")= 'Github'
+						| ~
+						a.about__social(href="https://www.pinterest.com/redstrawberries/")= 'Pinterest'
+						| ~
+						a.about__social(href="https://codepen.io/xtinarees")= 'Codepen'
+
+
+
+
+		script(src='js/jquery.js')
+		script(src='js/lodash.custom.min.js')
+		script(src='js/main.js')
+
+
+
+
+
+
+
