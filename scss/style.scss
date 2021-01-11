@@ -543,19 +543,16 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    @include breakpoint(small-only) {
+    @include breakpoint(medium-small) {
         flex-direction: column;
     }
 }
 .about__image {
     height: auto; 
-    @include breakpoint(large-only) {
-        width: 400px;
-    }
-    @include breakpoint(medium-only) {
-        flex-basis: 50%;
-    }
+    flex-shrink: 0;
+    flex-grow: 0;
     max-width: 100%;
+    width: 400px;
 }
 
 .about__content {
@@ -564,10 +561,14 @@ body {
     line-height: 1.5;
     font-size: 16px;
     width: 100%;
-    @include breakpoint(large-medium) {
-        max-width: 400px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 400px;
+    @include breakpoint(medium-only) {
+        width: 60%;
     }
-    @include breakpoint(small-only) {
+
+    @include breakpoint(medium-small) {
         padding: 1em 0;
         text-align: center;
         max-width: 250px;
