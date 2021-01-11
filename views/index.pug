@@ -40,6 +40,25 @@
  
 	var filtereds = [
 		{
+			year: '2019',
+			items: [
+				{
+					name: 'Dallas News',
+					link: 'https://www.dallasnews.com/',
+					year: '2019',
+					role: 'code',
+					client: 'dmn'
+				},
+				{
+					name: 'Workweek Lunch',
+					link: 'https://workweeklunch.com/',
+					year: '2019',
+					role: 'code',
+					client: 'freelance'
+				}
+			]
+		},
+		{
 			year: '2018',
 			items: [
 				{
@@ -77,7 +96,7 @@
 			items: [
 				{
 					name: 'Quote Wall',
-					link: 'https://www.dmagazine.com/section/arts-entertainment/?layout=quote',
+					link: 'https://web.archive.org/web/20201124155025/https://www.dmagazine.com/section/arts-entertainment/?layout=quote',
 					year: '2017',
 					role: 'code design',
 					client: 'fun dmagazine',
@@ -174,7 +193,7 @@
 				},
 				{
 					name: 'Old Portfolio Website',
-					link: '/old',
+					link: 'https://web.archive.org/web/20150801081006/http://christinarees.com/',
 					year: '2013',
 					role: 'code design',
 					client: 'fun'
@@ -290,25 +309,12 @@ html(lang="en")
 			.container.about__inner
 				img.about__image(src='images/me.jpg')
 				.about__content
-					p= 'Front-end Developer at '
-						a(href="https://www.dmagazine.com/")= 'D Magazine'
-					p
-						| Previously: Intern, 
-						a(href="http://blog.apps.npr.org/") NPR Visuals Team
-						|  and Martha Stewart
-					p= "Education: RISD BFA Graphic Design 2014"
-					p= 'Contact: reesxtina@gmail.com'
-					p
-						a.about__social(href="https://github.com/xtinarees")= 'Github'
-						| ~
-						a.about__social(href="https://www.pinterest.com/redstrawberries/")= 'Pinterest'
-						| ~
-						a.about__social(href="https://codepen.io/xtinarees")= 'Codepen'
-						| ~
-						a.about__social(href="https://www.behance.net/xtinarees")= 'Behance'
-
-
-
+					p Full Stack Developer at <a href="https://www.dallasnews.com/">The Dallas Morning News</a>
+					p Previously: <a href="https://www.dmagazine.com">D Magazine</a>, <a href="http://blog.apps.npr.org/">NPR Visuals Team</a> Intern, and Martha Stewart Intern.
+					p Education: RISD BFA Graphic Design 2014
+					p Contact: reesxtina@gmail.com
+					p <a class="about__social" href="https://github.com/xtinarees">Github</a> ~ <a class="about__social" href="https://www.pinterest.com/redstrawberries/">Pinterest</a> ~ <a class="about__social" href="https://codepen.io/xtinarees">Codepen</a> ~ <a class="about__social" href="https://www.behance.net/xtinarees">Behance</a>
+	
 
 		script(src='js/jquery.js')
 		script(src='js/lodash.custom.min.js')
