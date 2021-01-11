@@ -3,5 +3,6 @@ node_modules
 test
 index.html
 style.css
+dist
 
 .DS_store
