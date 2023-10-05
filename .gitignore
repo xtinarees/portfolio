@@ -1,8 +1,7 @@
 images
 node_modules
 test
-index.html
-style.css
 dist
+furby
 
 .DS_store

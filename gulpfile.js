@@ -14,7 +14,7 @@ function doStyles() {
   return gulp.src('scss/style.scss')
     .pipe(sass({}))
     .pipe(autoprefixer('last 5 version'))
-    .pipe(gulp.dest('.'));
+    .pipe(gulp.dest('dist'));
 }
 
 // Concatenate & Minify JS
@@ -33,7 +33,7 @@ function doViews() {
     .pipe(pug({
       pretty: true
     }))
-    .pipe(gulp.dest('.'));
+    .pipe(gulp.dest('dist'));
 }
 
 // Watch Files For Changes
