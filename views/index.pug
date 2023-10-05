@@ -250,6 +250,8 @@
 		},
 	]
 
+	var image_path = "https://d32pw5n4g7lc7i.cloudfront.net/";
+
 
 doctype html
 html(lang="en")
@@ -300,14 +302,14 @@ html(lang="en")
 			.container
 				.other
 					each image in images
-						span.js-image.other__image(data-src='images/' + image.path)
+						span.js-image.other__image(data-src=image_path + image.path)
 						p.other__caption.js-image-caption= image.caption + ' ' + image.icon
 				button.others__button.js-get-new-image= 'Another One'
 
 		section.section.about#about
 			.nav-pushdown
 			.container.about__inner
-				img.about__image(src='images/me.jpg')
+				img.about__image(src=image_path + 'me.jpg')
 				.about__content
 					p Full Stack Developer at <a href="https://www.dallasnews.com/">The Dallas Morning News</a>
 					p Previously: <a href="https://www.dmagazine.com">D Magazine</a>, <a href="http://blog.apps.npr.org/">NPR Visuals Team</a> Intern, and Martha Stewart Intern.
