@@ -43,5 +43,7 @@ function watch() {
   gulp.watch('views/*.pug', doViews);
 }
 
+
 // Default Task
 gulp.task('default', watch);
+gulp.task('build', gulp.series(doScripts, doStyles, doViews));
