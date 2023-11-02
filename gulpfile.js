@@ -36,6 +36,11 @@ function doViews() {
     .pipe(gulp.dest('dist'));
 }
 
+function doElse() {
+  return gulp.src(['html/registry.html', 'images/registry-background.svg'])
+  .pipe(gulp.dest('dist'))
+}
+
 // Watch Files For Changes
 function watch() {
   gulp.watch('js/*.js', doScripts);
@@ -46,4 +51,4 @@ function watch() {
 
 // Default Task
 gulp.task('default', watch);
-gulp.task('build', gulp.series(doScripts, doStyles, doViews));
+gulp.task('build', gulp.series(doScripts, doStyles, doViews, doElse));
