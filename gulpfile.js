@@ -38,7 +38,7 @@ function doViews() {
 
 function doElse() {
   return gulp.src(['html/registry.html', 'images/registry-background.svg'])
-  .pipe(gulp.dest('dist/registry'))
+  .pipe(gulp.dest('dist'))
 }
 
 // Watch Files For Changes
